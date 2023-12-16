@@ -12,6 +12,7 @@ import booksData from "./data/books.json";
 // import topMusicData from "./data/top-music.json";
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/project-mongo";
+console.log(`Connection to MongoDB using URL: ${mongoUrl}`)
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.error("MongoDB connection error:", err))
